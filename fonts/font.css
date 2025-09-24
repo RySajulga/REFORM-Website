@@ -1,0 +1,11 @@
+/* fonts.css */
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NeueHaasDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Neue Haas Grotesk', Helvetica, Arial, sans-serif;
+}

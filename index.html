@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REFORM - Upcycled Clothing</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Neue Haas Grotesk"', 'Helvetica', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="fonts.css">
+
+  <!-- Optional main CSS for extra styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-8 py-4 shadow-md" style="background-color: #151514; font-family: 'Neue Haas Grotesk', Helvetica;">
+    <img src="images/REFORM Logo.png" alt="REFORM Logo" class="h-10">
+    <nav class="text-2x1 flex space-x-6 font-bold" style="color: #fffefe">
+      <a href="#about" class="hover:text-green-500">About</a>
+      <a href="#products" style="font-family: 'Neue Haas Grotesk', sans-serif;">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+</body>
+</html>
