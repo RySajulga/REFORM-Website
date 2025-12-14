@@ -24,90 +24,38 @@
   <!-- Optional main CSS for extra styles -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-white min-h-screen" style="font-family: 'Neue Haas Grotesk', Helvetica, sans-serif">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-4 shadow-md" style="background-color: #151514; font-family: 'Neue Haas Grotesk', Helvetica;">
-    <img src="images/REFORM Logo.png" alt="REFORM Logo" class="h-10">
-    <nav class="text-2x1 flex space-x-6 font-bold" style="color: #fffefe">
-      <a href="#about" class="hover:text-green-500">About</a>
-      <a href="#products" style="font-family: 'Neue Haas Grotesk', sans-serif;">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Main Grid Container -->
+   <main class="min-h-screen grid grid-cols-12 grid-rows-12 gap-4 p-6">
+
+    <!-- TOP LEFT: Navigation -->
+    <section class="col-span-4 row-span-2 border-2 border-black"> 
+      <p class="p-4"> Navigation</p>
+    </section>
+    
+    <!-- TOP RIGHT: Icon and Stats -->
+     <section class="col-span-8 row-span-2 border-2 border-black">
+      <p class="p-4"> Icons / Stats</p>
+     </section>
+
+     <!-- Center: Hero pic -->
+     <section class="col-span-12 row-span-6 border-2 border-black">
+      <p class="p-4 text-center"> Hero Image</p>
+     </section>
+
+    <!-- BOTTOM LEFT: Feature Box -->
+    <section class="col-span-6 row-span-4 border-2 border-black">
+      <p class="p-4 text-center"> Featured</p>
+    </section>
+
+
+    <!-- BOTTOM RIGHT: Extra Images -->
+    <section class="col-span-6 row-span-4 border-2 border-black">
+      <p class="p-4 text-center"> Extra Images</p>
+    </section>
+
+  
+   </main>
 </body>
 </html>
-
-<!-- HERO SECTION -->
-<section 
-  class="relative text-white"
-  style="background: linear-gradient(to right top, #1E201E, #697565, #ECDFCC);">
-  <div class="flex items-center justify-center min-h-screen px-6">
-    <div class="text-center max-w-2xl">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">REFORM</h1>
-    <p class="text-xl mb-6">Redefine Fashion by Transforming Discarded Clothing Into Unique and Sustainable Pieces.</p>
-    <a href="#shop" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Shop Now</a>
-  </div>
-</section>
-
-<!-- PRODUCT GRID -->
- <section id="shop" class="px-8 py-16">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4">Featured Collection</h1>
-  <div class="grid grid-cols-1 sm.grid-cols2 md:grid-cols-5 gap-8">
-
-  <!-- Product 1 -->
-    <div class="border rounded-lg shadow hower:shadow-lg transition max-w-xs  mx-auto">
-      <div class="aspect-[4/5] overflow-hidden rounded-t-lg">
-      <img src="images/lizardjorts.jpg" alt="Product" class="w-full h-full object-cover">
-      </div>
-      <div class="p-4">
-        <h4 class="font-semibold">Upcycled Lizard Jorts</h4>
-        <p class="text-gray-600">$75.00</p>
-    </div>
-    </div>
-
-    <div class="border rounded-lg shadow hower:shadow-lg transition max-w-xs  mx-auto">
-      <div class="aspect-[4/5] overflow-hidden rounded-t-lg">
-      <img src="images/lizardjorts.jpg" alt="Product" class="w-full h-full object-cover">
-      </div>
-      <div class="p-4">
-        <h4 class="font-semibold">Upcycled Lizard Jorts</h4>
-        <p class="text-gray-600">$75.00</p>
-    </div>
-    </div>
-    <div class="border rounded-lg shadow hower:shadow-lg transition max-w-xs  mx-auto">
-      <div class="aspect-[4/5] overflow-hidden rounded-t-lg">
-      <img src="images/lizardjorts.jpg" alt="Product" class="w-full h-full object-cover">
-      </div>
-      <div class="p-4">
-        <h4 class="font-semibold">Upcycled Lizard Jorts</h4>
-        <p class="text-gray-600">$75.00</p>
-    </div>
-    </div>
-    
-        <div class="border rounded-lg shadow hower:shadow-lg transition max-w-xs  mx-auto">
-      <div class="aspect-[4/5] overflow-hidden rounded-t-lg">
-      <img src="images/lizardjorts.jpg" alt="Product" class="w-full h-full object-cover">
-      </div>
-      <div class="p-4">
-        <h4 class="font-semibold">Upcycled Lizard Jorts</h4>
-        <p class="text-gray-600">$75.00</p>
-    </div>
-    </div>
-
-
-        <div class="border rounded-lg shadow hower:shadow-lg transition max-w-xs  mx-auto">
-      <div class="aspect-[4/5] overflow-hidden rounded-t-lg">
-      <img src="images/lizardjorts.jpg" alt="Product" class="w-full h-full object-cover">
-      </div>
-      <div class="p-4">
-        <h4 class="font-semibold">Upcycled Lizard Jorts</h4>
-        <p class="text-gray-600">$75.00</p>
-    </div>
-    </div>
-
-
-    
-
-  </div>
- </section>
