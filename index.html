@@ -27,32 +27,153 @@
 <body class="bg-white min-h-screen" style="font-family: 'Neue Haas Grotesk', Helvetica, sans-serif">
 
   <!-- Main Grid Container -->
-   <main class="min-h-screen grid grid-cols-12 grid-rows-12 gap-4 p-6">
+   <main class="main-grid">
 
     <!-- TOP LEFT: Navigation -->
-    <section class="col-span-4 row-span-2 border-2 border-black"> 
-      <p class="p-4"> Navigation</p>
+    <section class="col-span-4 row-span-2 section-border section-padding"> 
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <button class="nav-button">CATALOG</button>
+        <button class="nav-button">ABOUT US</button>
+        <button class="nav-button">CONTACT US</button>
+      </div>
+
+      <!-- SHOP Section -->
+      <div class="shop-section">
+        <!-- Three dots -->
+        <div class="three-dots">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+          <div class="dot3"></div>
+        </div>
+        
+        <!-- Shop image placeholder -->
+        <div class="shop-image">
+          <span style="font-size: 0.75rem;">IMG</span>
+        </div>
+        
+        <!-- SHOP text (vertical) -->
+        <div class="vertical-text">SHOP</div>
+        
+        <!-- Arrow circle -->
+        <div class="arrow-circle">→</div>
+      </div>
     </section>
     
     <!-- TOP RIGHT: Icon and Stats -->
-     <section class="col-span-8 row-span-2 border-2 border-black">
-      <p class="p-4"> Icons / Stats</p>
+     <section class="col-span-8 row-span-2 section-border section-padding">
+      <div class="top-right-section">
+        <!-- Icons Bar (top right) -->
+        <div class="icons-bar">
+          <div class="icon">♡</div>
+          <div class="icon">🛒</div>
+          <div class="icon">👤</div>
+        </div>
+
+        <!-- Product Stats -->
+        <div class="stats-text">
+          <div><strong>&lt;100&gt;</strong> New collections of winter jackets   <strong>&lt;300&gt;</strong> stylishly dressed people with our things</div>
+        </div>
+
+        <!-- Quality Text -->
+        <div class="quality-text">
+          <div>Quality that Withstands</div>
+          <div>Time and Temperature</div>
+        </div>
+
+        <!-- Small Icons -->
+        <div class="small-icons">
+          <div class="small-icon">⊞</div>
+          <div class="small-icon">⛶</div>
+        </div>
+        
+        <!-- Year Indicator -->
+        <div class="year-indicator">2016</div>
+      </div>
      </section>
 
      <!-- Center: Hero pic -->
-     <section class="col-span-12 row-span-6 border-2 border-black">
-      <p class="p-4 text-center"> Hero Image</p>
+     <section class="col-span-12 row-span-6 section-border">
+      <div class="hero-section">
+        <!-- Hero Image -->
+        <img src="images/REFORM temp wallpaper.png" alt="Hero" class="hero-image">
+        
+        <!-- Left Side Annotations -->
+        <div class="annotation" style="left: 5%; top: 20%;">
+          <div class="annotation-icon">↓</div>
+          <div class="annotation-text" style="margin-top: 0.5rem;">Go to catalog now</div>
+        </div>
+        
+        <!-- Right Side Annotations -->
+        <div class="annotation" style="right: 5%; top: 30%;">
+          <div class="annotation-text" style="margin-bottom: 0.5rem;">Find out how cold our jackets can withstand</div>
+          
+          <!-- Size Circles -->
+          <div class="size-circles" style="margin-top: 1rem;">
+            <div class="size-circle">S</div>
+            <div class="size-circle">M</div>
+            <div class="size-circle">L</div>
+            <div class="size-circle">XL</div>
+          </div>
+        </div>
+      </div>
      </section>
 
-    <!-- BOTTOM LEFT: Feature Box -->
-    <section class="col-span-6 row-span-4 border-2 border-black">
-      <p class="p-4 text-center"> Featured</p>
+    <!-- BOTTOM LEFT: Headline and Description -->
+    <section class="col-span-6 row-span-4 section-border section-padding">
+      <div class="bottom-left-section">
+        <!-- Logo and Barcode -->
+        <div class="logo-barcode">
+          <div style="font-weight: bold; font-size: 1.5rem;">REFORM</div>
+          <div class="barcode"></div>
+        </div>
+        
+        <!-- Main Headline -->
+        <h2 class="headline-main">Your Ultimate Defense Against the Coldest Chill</h2>
+        
+        <!-- Description -->
+        <p class="description-text">
+          ***When winter's icy grip tightens____there's no room for compromise on warmth and protection.////
+        </p>
+        
+        <!-- Shop Now Button -->
+        <button class="shop-now-button">
+          Shop now ///
+          <span>↗</span>
+        </button>
+      </div>
     </section>
 
-
-    <!-- BOTTOM RIGHT: Extra Images -->
-    <section class="col-span-6 row-span-4 border-2 border-black">
-      <p class="p-4 text-center"> Extra Images</p>
+    <!-- BOTTOM RIGHT: Feature Box and Image -->
+    <section class="col-span-6 row-span-4 section-border section-padding">
+      <div class="bottom-right-section">
+        <div class="bottom-right-content">
+          <!-- Feature Box -->
+          <div class="feature-box">
+            <div class="chevrons">>>> <<<</div>
+            
+            <ul class="feature-list">
+              <li>Unyielding Protection,</li>
+              <li>Uncompromising Comfort</li>
+            </ul>
+            
+            <div class="brand-logo">
+              <span><<</span>
+              <span>REFORM</span>
+              <span>>></span>
+            </div>
+          </div>
+          
+          <!-- Secondary Image -->
+          <div class="secondary-image">
+            <img src="images/lizardjorts.jpg" alt="Secondary product image">
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        
+        <!-- Large Chevrons -->
+        <div class="large-chevrons"><<</div>
+      </div>
     </section>
 
   
