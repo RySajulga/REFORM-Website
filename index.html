@@ -3,180 +3,245 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REFORM - Upcycled Clothing</title>
+  <title>REFORM — Redefine Fashion</title>
+  <meta name="description" content="REFORM reclaims garments on their way to the landfill and rebuilds them into one-of-one, sustainable pieces." />
+  <link rel="icon" href="images/REFORM Logo.png" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Neue Haas Grotesk"', 'Helvetica', 'ui-sans-serif', 'system-ui']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Custom Fonts -->
-  <link rel="stylesheet" href="/fonts/fonts.css">
-
-  <!-- Optional main CSS for extra styles -->
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white min-h-screen" style="font-family: 'Neue Haas Grotesk', Helvetica, sans-serif">
+<body>
 
-  <!-- Main Grid Container -->
-   <main class="main-grid">
+  <div class="announce">
+    <span>HANDMADE &middot; ZERO WASTE &middot; ONE OF ONE</span>
+    <span class="announce-links"><a href="#process">OUR PROCESS</a> | <a href="#contact">CONTACT</a></span>
+  </div>
 
-    <!-- TOP LEFT: Navigation -->
-    <section class="col-span-4 row-span-2 section-border section-padding"> 
-      <!-- Navigation Buttons -->
-      <div class="nav-buttons">
-        <button class="nav-button">CATALOG</button>
-        <button class="nav-button">ABOUT US</button>
-        <button class="nav-button">CONTACT US</button>
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="main-nav main-nav-left">
+        <a href="#shop">Shop</a>
+        <a href="#process">Process</a>
+      </nav>
+
+      <a href="#top" class="logo">
+        <span class="arrow-icon logo-mark"></span>
+        <span class="logo-word">REFORM</span>
+      </a>
+
+      <nav class="main-nav main-nav-right" id="main-nav">
+        <a href="#shop">Shop</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow-line">ONE OF ONE. ALWAYS.<span class="rule"></span></p>
+        <h1 class="hero-type">REFORM</h1>
       </div>
 
-      <!-- SHOP Section -->
-      <div class="shop-section">
-        <!-- Three dots -->
-        <div class="three-dots">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
-          <div class="dot3"></div>
-        </div>
-        
-        <!-- Shop image placeholder -->
-        <div class="shop-image">
-          <span style="font-size: 0.75rem;">IMG</span>
-        </div>
-        
-        <!-- SHOP text (vertical) -->
-        <div class="vertical-text">SHOP</div>
-        
-        <!-- Arrow circle -->
-        <div class="arrow-circle">→</div>
+      <div class="hero-media reveal">
+        <img src="images/lizardjorts.jpg" alt="One-of-one REFORM denim shorts, hand-reworked with a dragon graphic panel">
       </div>
-    </section>
-    
-    <!-- TOP RIGHT: Icon and Stats -->
-     <section class="col-span-8 row-span-2 section-border section-padding">
-      <div class="top-right-section">
-        <!-- Icons Bar (top right) -->
-        <div class="icons-bar">
-          <div class="icon">♡</div>
-          <div class="icon">🛒</div>
-          <div class="icon">👤</div>
-        </div>
 
-        <!-- Product Stats -->
-        <div class="stats-text">
-          <div><strong>&lt;100&gt;</strong> New collections of winter jackets   <strong>&lt;300&gt;</strong> stylishly dressed people with our things</div>
+      <div class="hero-foot reveal">
+        <div class="hero-foot-left">
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+          <a href="#process" class="text-link">Explore the Process <span class="arrow-icon"></span></a>
         </div>
-
-        <!-- Quality Text -->
-        <div class="quality-text">
-          <div>Quality that Withstands</div>
-          <div>Time and Temperature</div>
+        <div class="hero-foot-right">
+          <span>LATEST DROP</span>
+          <span class="rule rule-right"></span>
+          <span>2026</span>
         </div>
-
-        <!-- Small Icons -->
-        <div class="small-icons">
-          <div class="small-icon">⊞</div>
-          <div class="small-icon">⛶</div>
-        </div>
-        
-        <!-- Year Indicator -->
-        <div class="year-indicator">2016</div>
-      </div>
-     </section>
-
-     <!-- Center: Hero pic -->
-     <section class="col-span-12 row-span-6 section-border">
-      <div class="hero-section">
-        <!-- Hero Image -->
-        <img src="images/REFORM temp wallpaper.png" alt="Hero" class="hero-image">
-        
-        <!-- Left Side Annotations -->
-        <div class="annotation" style="left: 5%; top: 20%;">
-          <div class="annotation-icon">↓</div>
-          <div class="annotation-text" style="margin-top: 0.5rem;">Go to catalog now</div>
-        </div>
-        
-        <!-- Right Side Annotations -->
-        <div class="annotation" style="right: 5%; top: 30%;">
-          <div class="annotation-text" style="margin-bottom: 0.5rem;">Find out how cold our jackets can withstand</div>
-          
-          <!-- Size Circles -->
-          <div class="size-circles" style="margin-top: 1rem;">
-            <div class="size-circle">S</div>
-            <div class="size-circle">M</div>
-            <div class="size-circle">L</div>
-            <div class="size-circle">XL</div>
-          </div>
-        </div>
-      </div>
-     </section>
-
-    <!-- BOTTOM LEFT: Headline and Description -->
-    <section class="col-span-6 row-span-4 section-border section-padding">
-      <div class="bottom-left-section">
-        <!-- Logo and Barcode -->
-        <div class="logo-barcode">
-          <div style="font-weight: bold; font-size: 1.5rem;">REFORM</div>
-          <div class="barcode"></div>
-        </div>
-        
-        <!-- Main Headline -->
-        <h2 class="headline-main">Your Ultimate Defense Against the Coldest Chill</h2>
-        
-        <!-- Description -->
-        <p class="description-text">
-          ***When winter's icy grip tightens____there's no room for compromise on warmth and protection.////
-        </p>
-        
-        <!-- Shop Now Button -->
-        <button class="shop-now-button">
-          Shop now ///
-          <span>↗</span>
-        </button>
       </div>
     </section>
 
-    <!-- BOTTOM RIGHT: Feature Box and Image -->
-    <section class="col-span-6 row-span-4 section-border section-padding">
-      <div class="bottom-right-section">
-        <div class="bottom-right-content">
-          <!-- Feature Box -->
-          <div class="feature-box">
-            <div class="chevrons">>>> <<<</div>
-            
-            <ul class="feature-list">
-              <li>Unyielding Protection,</li>
-              <li>Uncompromising Comfort</li>
-            </ul>
-            
-            <div class="brand-logo">
-              <span><<</span>
-              <span>REFORM</span>
-              <span>>></span>
-            </div>
-          </div>
-          
-          <!-- Secondary Image -->
-          <div class="secondary-image">
-            <img src="images/lizardjorts.jpg" alt="Secondary product image">
-            <div class="heart-icon">♡</div>
-          </div>
+    <!-- PROCESS BAND (dark accent) -->
+    <section class="process-band" id="process">
+      <div class="process-grid">
+        <div class="process-tile reveal">
+          <div class="tile-icon"><span class="arrow-icon"></span></div>
+          <h3>Reclaim</h3>
+          <p>We pull garments headed for the landfill — thrift excess, factory deadstock, damaged pieces others wrote off.</p>
+          <a href="#about" class="text-link light">Our Story <span class="arrow-icon"></span></a>
         </div>
-        
-        <!-- Large Chevrons -->
-        <div class="large-chevrons"><<</div>
+        <div class="process-tile reveal">
+          <div class="tile-icon"><span class="arrow-icon"></span></div>
+          <h3>Deconstruct</h3>
+          <p>Every piece is stripped down, cut, and reworked by hand. Nothing about the process is automated.</p>
+          <a href="#about" class="text-link light">Our Story <span class="arrow-icon"></span></a>
+        </div>
+        <div class="process-tile reveal">
+          <div class="tile-icon"><span class="arrow-icon"></span></div>
+          <h3>Reform</h3>
+          <p>What's left is rebuilt into something new — a single piece that will never be made the same way twice.</p>
+          <a href="#shop" class="text-link light">Shop It <span class="arrow-icon"></span></a>
+        </div>
       </div>
     </section>
 
-  
-   </main>
+    <!-- STATEMENT BANNER -->
+    <section class="statement" id="about">
+      <div class="statement-media reveal">
+        <img src="images/lizardjorts.jpg" alt="Close detail of REFORM's reworked denim shorts">
+      </div>
+      <div class="statement-copy reveal">
+        <p class="eyebrow-line">NEW BRAND<span class="rule"></span></p>
+        <h2>BORN FROM<br>WHAT WAS<br>DISCARDED.</h2>
+        <p class="statement-sub">REFORM is just getting started — every piece from here is reclaimed, reworked by hand, and made once. No restocks, no reprints.</p>
+        <a href="#shop" class="btn btn-primary btn-inverse">Shop the Drop</a>
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="badges">
+      <div class="badge reveal">
+        <span class="badge-icon"><span class="arrow-icon"></span></span>
+        <div>
+          <h4>Handmade</h4>
+          <p>Cut and sewn by hand</p>
+        </div>
+      </div>
+      <div class="badge reveal">
+        <span class="badge-icon"><span class="arrow-icon"></span></span>
+        <div>
+          <h4>Zero Waste</h4>
+          <p>No virgin fabric, ever</p>
+        </div>
+      </div>
+      <div class="badge reveal">
+        <span class="badge-icon"><span class="arrow-icon"></span></span>
+        <div>
+          <h4>One of One</h4>
+          <p>Never made the same way twice</p>
+        </div>
+      </div>
+      <div class="badge reveal">
+        <span class="badge-icon"><span class="arrow-icon"></span></span>
+        <div>
+          <h4>Small Batch</h4>
+          <p>Made a single piece at a time</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DROP GRID -->
+    <section class="drop" id="shop">
+      <div class="drop-head reveal">
+        <h2>Best of REFORM</h2>
+        <a href="#shop" class="text-link">View All <span class="arrow-icon"></span></a>
+      </div>
+
+      <div class="drop-grid">
+        <!-- Real, available piece -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img src="images/lizardjorts.jpg" alt="One-of-one REFORM denim shorts, hand-reworked with a dragon graphic panel">
+            <span class="product-tag">One of One</span>
+            <button class="wishlist" aria-label="Save to wishlist" type="button">&hearts;</button>
+          </div>
+          <div class="product-info">
+            <h3>Reworked Dragon Denim Shorts</h3>
+            <p>100% reclaimed denim &middot; 1 of 1</p>
+            <a href="#contact" class="text-link">Inquire <span class="arrow-icon"></span></a>
+          </div>
+        </article>
+
+        <!-- Placeholder slots for upcoming pieces -->
+        <article class="product-card is-placeholder reveal">
+          <div class="product-media placeholder-media">
+            <span class="arrow-icon placeholder-icon"></span>
+          </div>
+          <div class="product-info">
+            <h3>Next Piece</h3>
+            <p>Coming soon</p>
+          </div>
+        </article>
+
+        <article class="product-card is-placeholder reveal">
+          <div class="product-media placeholder-media">
+            <span class="arrow-icon placeholder-icon"></span>
+          </div>
+          <div class="product-info">
+            <h3>Next Piece</h3>
+            <p>Coming soon</p>
+          </div>
+        </article>
+
+        <article class="product-card is-placeholder reveal">
+          <div class="product-media placeholder-media">
+            <span class="arrow-icon placeholder-icon"></span>
+          </div>
+          <div class="product-info">
+            <h3>Next Piece</h3>
+            <p>Coming soon</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta-inner reveal">
+        <h2>GET FIRST ACCESS<br>TO THE NEXT DROP</h2>
+        <p>Every drop is small and one-of-one. Get on the list so you don't miss it.</p>
+        <form class="cta-form" id="cta-form" novalidate>
+          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit">Join <span class="arrow-icon"></span></button>
+        </form>
+        <p class="cta-note" id="cta-note" role="status"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="arrow-icon logo-mark"></span>
+          <span class="logo-word">REFORM</span>
+        </a>
+        <p>Redefine fashion by transforming discarded clothing into unique and sustainable pieces.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Shop</h5>
+          <a href="#shop">Latest Drop</a>
+          <a href="#shop">Archive</a>
+        </div>
+        <div class="footer-col">
+          <h5>Brand</h5>
+          <a href="#process">Our Process</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:hello@reformclothing.com">hello@reformclothing.com</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 REFORM CLOTHING. ALL RIGHTS RESERVED.</span>
+      <span>MADE FROM WHAT WAS DISCARDED.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
