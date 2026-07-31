@@ -84,6 +84,7 @@ button, input {
    Buttons & links
    ========================================================================== */
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -94,8 +95,29 @@ button, input {
   letter-spacing: 0.08em;
   border: 1px solid var(--black);
   cursor: pointer;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+  isolation: isolate;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease-out;
   white-space: nowrap;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  z-index: 0;
+}
+
+.btn:hover::before { transform: scaleX(1); }
+
+.btn-label {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .btn-primary {
@@ -103,10 +125,7 @@ button, input {
   color: var(--cream);
 }
 
-.btn-primary:hover {
-  background-color: transparent;
-  color: var(--black);
-}
+.btn-primary::before { background-color: var(--cream); }
 
 .btn-inverse {
   border-color: var(--cream);
@@ -114,12 +133,10 @@ button, input {
   color: var(--black);
 }
 
-.btn-inverse:hover {
-  background-color: transparent;
-  color: var(--cream);
-}
+.btn-inverse::before { background-color: var(--black); }
 
 .text-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -127,16 +144,30 @@ button, input {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 0.2rem;
-  transition: opacity 0.2s ease;
+  padding-bottom: 0.25rem;
 }
 
-.text-link:hover { opacity: 0.6; }
+.text-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.text-link:hover::after { transform: scaleX(1); }
+
+.text-link .arrow-icon { transition: transform 0.3s ease; }
+
+.text-link:hover .arrow-icon { transform: scaleX(-1) translateX(-4px); }
 
 .text-link.light {
   color: var(--cream);
-  border-bottom-color: var(--line-dark);
 }
 
 /* ==========================================================================
@@ -166,6 +197,11 @@ button, input {
   background-color: rgba(243, 239, 230, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
+  transition: box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 10px 30px -22px rgba(13, 13, 13, 0.4);
 }
 
 .header-inner {
@@ -176,6 +212,12 @@ button, input {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 1rem;
+  transition: padding 0.3s ease;
+}
+
+.site-header.is-scrolled .header-inner {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .logo {
@@ -244,6 +286,7 @@ button, input {
   max-width: var(--max);
   margin: 0 auto;
   padding: 3.5rem 1.5rem 0;
+  perspective: 1400px;
 }
 
 .hero-copy { text-align: left; }
@@ -252,6 +295,7 @@ button, input {
   font-size: clamp(4rem, 15vw, 11.5rem);
   line-height: 0.86;
   margin-top: 1.25rem;
+  will-change: transform;
 }
 
 .hero-media {
@@ -264,6 +308,9 @@ button, input {
   aspect-ratio: 4 / 5;
   overflow: hidden;
   box-shadow: 0 30px 60px -20px rgba(13, 13, 13, 0.35);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }
 
 .hero-media img {
@@ -304,6 +351,45 @@ button, input {
 .rule-right { width: 1.5rem; }
 
 /* ==========================================================================
+   Marquee
+   ========================================================================== */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background-color: var(--cream-alt);
+  padding: 1.1rem 0;
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+.marquee-track span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.marquee-track .dot {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
    Process band (dark accent)
    ========================================================================== */
 .process-band {
@@ -321,9 +407,12 @@ button, input {
 .process-tile {
   padding: 3.5rem 2.5rem;
   border-left: 1px solid var(--line-dark);
+  transition: background-color 0.35s ease;
 }
 
 .process-tile:first-child { border-left: none; }
+
+.process-tile:hover { background-color: rgba(243, 239, 230, 0.05); }
 
 .tile-icon {
   width: 2.75rem;
@@ -335,6 +424,12 @@ button, input {
   justify-content: center;
   font-size: 1rem;
   margin-bottom: 1.75rem;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.process-tile:hover .tile-icon {
+  transform: rotate(-10deg) scale(1.08);
+  border-color: var(--cream);
 }
 
 .process-tile h3 {
@@ -419,6 +514,12 @@ button, input {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.badge:hover .badge-icon {
+  transform: rotate(-10deg) scale(1.08);
+  border-color: var(--black);
 }
 
 .badge h4 {
@@ -455,7 +556,12 @@ button, input {
   gap: 1.75rem;
 }
 
-.product-card { position: relative; }
+.product-card {
+  position: relative;
+  transition: transform 0.35s ease;
+}
+
+.product-card:not(.is-placeholder):hover { transform: translateY(-6px); }
 
 .product-media {
   position: relative;
@@ -463,17 +569,22 @@ button, input {
   overflow: hidden;
   background-color: var(--cream-alt);
   border: 1px solid var(--line);
+  transition: box-shadow 0.35s ease;
+}
+
+.product-card:not(.is-placeholder):hover .product-media {
+  box-shadow: 0 26px 44px -26px rgba(13, 13, 13, 0.4);
 }
 
 .product-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .product-card:not(.is-placeholder):hover .product-media img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .product-tag {
@@ -686,6 +797,32 @@ button, input {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .marquee-track { animation: none; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-media,
+  .hero-type,
+  .btn,
+  .btn::before,
+  .process-tile,
+  .tile-icon,
+  .badge-icon,
+  .product-card,
+  .product-media,
+  .product-media img,
+  .text-link::after {
+    transition: none !important;
+  }
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -708,6 +845,8 @@ button, input {
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
+    justify-self: stretch;
     flex-direction: column;
     gap: 0;
     background-color: var(--cream);
